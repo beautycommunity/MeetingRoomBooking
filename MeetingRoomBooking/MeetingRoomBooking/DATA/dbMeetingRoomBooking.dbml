@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbMeetingRoomBooking_dev" Class="dbMeetingRoomBookingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=5cosmeda.homeunix.com,1733;Initial Catalog=dbMeetingRoomBooking_dev;Persist Security Info=True;User ID=sa;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dbMeetingRoomBooking_devConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DOC_BOOKING" Member="DOC_BOOKINGs">
+    <Type Name="DOC_BOOKING">
+      <Column Name="SCREATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SUPDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UCREATE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UUPDATE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DOCNO" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOCDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="STCODE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DMCODE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="RMCODE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DOC_BOOKING_DOC_BOOKING_D" Member="DOC_BOOKING_Ds" ThisKey="DOCNO" OtherKey="DOCNO" Type="DOC_BOOKING_D" />
+      <Association Name="DOC_BOOKING_DOC_BOOKING_I" Member="DOC_BOOKING_Is" ThisKey="DOCNO" OtherKey="DOCNO" Type="DOC_BOOKING_I" />
+      <Association Name="DOC_BOOKING_DOC_BOOKING_T" Member="DOC_BOOKING_Ts" ThisKey="DOCNO" OtherKey="DOCNO" Type="DOC_BOOKING_T" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOC_BOOKING_D" Member="DOC_BOOKING_Ds">
+    <Type Name="DOC_BOOKING_D">
+      <Column Name="DOCNO" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ITEMNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TDCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DOC_BOOKING_DOC_BOOKING_D" Member="DOC_BOOKING" ThisKey="DOCNO" OtherKey="DOCNO" Type="DOC_BOOKING" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOC_BOOKING_I" Member="DOC_BOOKING_Is">
+    <Type Name="DOC_BOOKING_I">
+      <Column Name="DOCNO" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ITEMNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TMCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DOC_BOOKING_DOC_BOOKING_I" Member="DOC_BOOKING" ThisKey="DOCNO" OtherKey="DOCNO" Type="DOC_BOOKING" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOC_BOOKING_T" Member="DOC_BOOKING_Ts">
+    <Type Name="DOC_BOOKING_T">
+      <Column Name="DOCNO" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ITEMNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TLCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DOC_BOOKING_DOC_BOOKING_T" Member="DOC_BOOKING" ThisKey="DOCNO" OtherKey="DOCNO" Type="DOC_BOOKING" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOG_BOOKING" Member="LOG_BOOKINGs">
+    <Type Name="LOG_BOOKING">
+      <Column Name="DOCNO" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOCDATE" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_DM" Member="MAS_DMs">
+    <Type Name="MAS_DM">
+      <Column Name="DMCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DMNAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_DRINK" Member="MAS_DRINKs">
+    <Type Name="MAS_DRINK">
+      <Column Name="TDCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_RM_TM" Member="MAS_RM_TMs">
+    <Type Name="MAS_RM_TM">
+      <Column Name="RMCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOCDATE" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TMCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOCNO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_RN" Member="MAS_RNs">
+    <Type Name="MAS_RN">
+      <Column Name="STCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOCTYPE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DAY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NUMBER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="L_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="L_MONTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="L_DAY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="L_NUMBER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_ROOM" Member="MAS_ROOMs">
+    <Type Name="MAS_ROOM">
+      <Column Name="RMCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RMNAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MIN_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAX_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_ST" Member="MAS_STs">
+    <Type Name="MAS_ST">
+      <Column Name="STCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STNAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="STPASSWORD" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PERMISSION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_TIME" Member="MAS_TIMEs">
+    <Type Name="MAS_TIME">
+      <Column Name="TMCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="S_TIME" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="E_TIME" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_TOOLS" Member="MAS_TOOLs">
+    <Type Name="MAS_TOOL">
+      <Column Name="TLCODE" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_MAS_ROOM" Member="T_MAS_ROOMs">
+    <Type Name="T_MAS_ROOM">
+      <Column Name="RMCODE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="RMNAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CFLAG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.MP_GET_ID" Method="MP_GET_ID">
+    <Parameter Name="STCODE" Parameter="sTCODE" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DOCTYPE" Parameter="dOCTYPE" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="MP_GET_IDResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.MP_PREPARE_USER" Method="MP_PREPARE_USER" />
+  <Function Name="dbo.MP_SET_ID" Method="MP_SET_ID">
+    <Parameter Name="STCODE" Parameter="sTCODE" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DOCTYPE" Parameter="dOCTYPE" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

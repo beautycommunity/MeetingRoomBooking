@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>จองห้องประชุม</h2>
+
+
+<hr />
+
+
+
+<div class="row">
+        <div class="col-md-10">
+
+            <section id="newDev">
+
+                <form action="/TicketLive/Dev/DevCreate" class="form-horizontal" enctype="multipart/form-data" method="post">
+                    <input class="hidden" data-val="true" data-val-number="The field US_ID must be a number." id="US_ID" name="US_ID" type="text" value="93" />
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">เอกสาร</label>
+                        <div class="col-md-10">
+                            <input class="form-control" id="txt_docno" name="txt_docno" type="text" value="" readonly="readonly" />
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">รหัสพนักงาน</label>
+                        <div class="col-md-10">
+                            <input class="form-control" id="txt_stcode" name="txt_stcode" type="text" value="" readonly="readonly" />
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">พนักงาน</label>
+                        <div class="col-md-10">
+
+                            <input class="form-control" id="txt_stname" name="txt_stname" type="text" value="" readonly="readonly" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="TOPIC">ฝ่าย</label>
+                        <div class="col-md-10">
+                            <input class="form-control" data-val="true" data-val-required="กรุณาใส่หัวข้อด้วยครับ" id="TOPIC" name="TOPIC" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="TOPIC" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="DETAIL">รายละเอียด</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control custom-control" cols="20" data-val="true" data-val-required="กรุณาใส่รายละเอียดด้วยครับ" id="DETAIL" name="DETAIL" rows="5" style="resize: none;"></textarea>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="DETAIL" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="TOPIC">จำนวนผู้ร่วมประชุม</label>
+                        <div class="col-md-10">
+                            <input class="form-control" data-val="true" data-val-required="กรุณาใส่หัวข้อด้วยครับ" id="TOPIC" name="TOPIC" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="TOPIC" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="JT_NAME">วันที่</label>
+                        <div class="col-md-10">
+                            <select class="form-control" data-val="true" data-val-number="The field JT_ID must be a number." data-val-required="กรุณาเลือกประเภทงาน" id="JT_ID" name="JT_ID">
+                                <option value="">Please select</option>
+                                <option value="24">รายงาน</option>
+                                <option value="25">ระบบใหม่</option>
+                                <option value="26">แก้ไขระบบ</option>
+                                <option value="27">ดึงข้อมูล</option>
+                            </select>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="JT_ID" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="TOPIC">ห้องประชุม</label>
+                        <div class="col-md-10">
+                            <input class="form-control" data-val="true" data-val-required="กรุณาใส่หัวข้อด้วยครับ" id="TOPIC" name="TOPIC" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="TOPIC" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="บันทึก" class="btn btn-primary" />
+                            <a href="/TicketLive/Dev" class="btn btn-default">ยกเลิก</a>
+                        </div>
+                    </div>
+                    <br />
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+
+
+
+<footer></footer>
+    
