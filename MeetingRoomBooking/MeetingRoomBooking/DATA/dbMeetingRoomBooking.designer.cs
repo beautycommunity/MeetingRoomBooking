@@ -220,10 +220,10 @@ namespace MeetingRoomBooking.DATA
 			return ((ISingleResult<MP_GET_IDResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MP_PREPARE_USER")]
-		public void MP_PREPARE_USER()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MP_PREPARE_USER", IsComposable=true)]
+		public object MP_PREPARE_USER()
 		{
-			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((object)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod()))).ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MP_SET_ID")]

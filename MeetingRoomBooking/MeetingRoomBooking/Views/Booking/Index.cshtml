@@ -1,7 +1,37 @@
-﻿
+﻿@model MeetingRoomBooking.Models.Documents
+
 @{
     ViewBag.Title = "Index";
 }
+
+@{
+
+
+
+    MeetingRoomBooking.Models.Documents cls = new MeetingRoomBooking.Models.Documents();
+
+    string _docrunning = cls.DocRuning();
+    string _stcode = cls.GetStcode("bbStcode");
+    string _stname = cls.GetStname(_stcode);
+    string _dpname = cls.GetDP(_stcode);
+
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $("#statusid").change(function () {
+            var aroom = $("#statusid")[0].value;
+            var adate = $("#SDATE")[0].value;
+
+            alert(aroom + ' ' + adate);
+            //var adate = document.getElementById('txt_docno').value; 
+           
+        });
+    });
+
+    
+</script>
 
 <h2>จองห้องประชุม</h2>
 
@@ -9,99 +39,212 @@
 <hr />
 
 
-
 <div class="row">
-        <div class="col-md-10">
+    <div class="col-md-10">
 
-            <section id="newDev">
+        <section id="newDev">
 
-                <form action="/TicketLive/Dev/DevCreate" class="form-horizontal" enctype="multipart/form-data" method="post">
-                    <input class="hidden" data-val="true" data-val-number="The field US_ID must be a number." id="US_ID" name="US_ID" type="text" value="93" />
+            <form action="/TicketLive/Dev/DevCreate" class="form-horizontal" enctype="multipart/form-data" method="post">
+                <input class="hidden" data-val="true" data-val-number="The field US_ID must be a number." id="US_ID" name="US_ID" type="text" value="93" />
 
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">เอกสาร</label>
-                        <div class="col-md-10">
-                            <input class="form-control" id="txt_docno" name="txt_docno" type="text" value="" readonly="readonly" />
+                <div class="form-group">
+                    <label class="col-md-2 control-label">เอกสาร</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="txt_docno" name="txt_docno" type="text" value="@_docrunning" readonly="readonly" />
 
-                        </div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">รหัสพนักงาน</label>
-                        <div class="col-md-10">
-                            <input class="form-control" id="txt_stcode" name="txt_stcode" type="text" value="" readonly="readonly" />
+                <div class="form-group">
+                    <label class="col-md-2 control-label">รหัสพนักงาน</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="txt_stcode" name="txt_stcode" type="text" value="@_stcode" readonly="readonly" />
 
-                        </div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">พนักงาน</label>
-                        <div class="col-md-10">
+                <div class="form-group">
+                    <label class="col-md-2 control-label">พนักงาน</label>
+                    <div class="col-md-10">
 
-                            <input class="form-control" id="txt_stname" name="txt_stname" type="text" value="" readonly="readonly" />
-                        </div>
+                        <input class="form-control" id="txt_stname" name="txt_stname" type="text" value="@_stname" readonly="readonly" />
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="TOPIC">ฝ่าย</label>
-                        <div class="col-md-10">
-                            <input class="form-control" data-val="true" data-val-required="กรุณาใส่หัวข้อด้วยครับ" id="TOPIC" name="TOPIC" type="text" value="" />
-                            <span class="field-validation-valid text-danger" data-valmsg-for="TOPIC" data-valmsg-replace="true"></span>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="TOPIC">ฝ่าย</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="txt_topic" name="txt_topic" type="text" value="@_dpname" readonly="readonly" />
 
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="DETAIL">รายละเอียด</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control custom-control" cols="20" data-val="true" data-val-required="กรุณาใส่รายละเอียดด้วยครับ" id="DETAIL" name="DETAIL" rows="5" style="resize: none;"></textarea>
-                            <span class="field-validation-valid text-danger" data-valmsg-for="DETAIL" data-valmsg-replace="true"></span>
-                        </div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="TOPIC">จำนวนผู้ร่วมประชุม</label>
-                        <div class="col-md-10">
-                            <input class="form-control" data-val="true" data-val-required="กรุณาใส่หัวข้อด้วยครับ" id="TOPIC" name="TOPIC" type="text" value="" />
-                            <span class="field-validation-valid text-danger" data-valmsg-for="TOPIC" data-valmsg-replace="true"></span>
-                        </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="txt_detail">รายละเอียด</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control custom-control" cols="20" data-val="true" data-val-required="กรุณาใส่รายละเอียด" id="txt_detail" name="txt_detail" rows="5" style="resize: none;"></textarea>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="txt_detail" data-valmsg-replace="true"></span>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="JT_NAME">วันที่</label>
-                        <div class="col-md-10">
-                            <select class="form-control" data-val="true" data-val-number="The field JT_ID must be a number." data-val-required="กรุณาเลือกประเภทงาน" id="JT_ID" name="JT_ID">
-                                <option value="">Please select</option>
-                                <option value="24">รายงาน</option>
-                                <option value="25">ระบบใหม่</option>
-                                <option value="26">แก้ไขระบบ</option>
-                                <option value="27">ดึงข้อมูล</option>
-                            </select>
-                            <span class="field-validation-valid text-danger" data-valmsg-for="JT_ID" data-valmsg-replace="true"></span>
-                        </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="txt_number">จำนวนผู้ร่วมประชุม</label>
+                    <div class="col-md-10">
+                        <input class="form-control" data-val="true" data-val-required="กรุณาใส่จำนวนผู้ร่วมประชุม" id="txt_number" name="txt_number" type="number" value="" style="text-align:right;" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="txt_number" data-valmsg-replace="true"></span>
                     </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="TOPIC">ห้องประชุม</label>
-                        <div class="col-md-10">
-                            <input class="form-control" data-val="true" data-val-required="กรุณาใส่หัวข้อด้วยครับ" id="TOPIC" name="TOPIC" type="text" value="" />
-                            <span class="field-validation-valid text-danger" data-valmsg-for="TOPIC" data-valmsg-replace="true"></span>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="บันทึก" class="btn btn-primary" />
-                            <a href="/TicketLive/Dev" class="btn btn-default">ยกเลิก</a>
-                        </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="JT_NAME">วันที่</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SDATE, new { htmlAttributes = new { @class = "form-control", @Value = "15/03/2018" } })
+                        @Html.ValidationMessageFor(model => model.SDATE, "", new { @class = "text-danger" })
+                        <span class="field-validation-valid text-danger" data-valmsg-for="JT_ID" data-valmsg-replace="true"></span>
                     </div>
-                    <br />
-                </form>
-            </section>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="txt_room">ห้องประชุม</label>
+                    <div class="col-md-10">
 
-        </div>
+                        @Html.DropDownListFor(m => m.STATUS_ID, Model.ROOM_LIST, "Please select", new { id = "statusid", @class = "form-control" })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="txt_number">ตารางเวลา</label>
+                    <div class="col-md-offset-2 col-md-10">
+                        <table>
+                            @for (int i = 0; i <= Model.getchk.Count() - 1; i = i + 2)
+                {
+                    if (i == Model.getchk.Count() - 1)
+                    {
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.getchk[i].Checked, new { Id = i, @disabled = "disabled" })
+                                @Html.DisplayFor(m => m.getchk[i].topic)
+                            </td>
+                            <td width="30px"></td>
+                            <td></td>
+                        </tr>
+        }
+        else
+        {
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(m => m.getchk[i].Checked, new { Id = i, @disabled = "disabled" })
+                    @Html.DisplayFor(m => m.getchk[i].topic)
+                </td>
+                <td width="30px"></td>
+                <td>
+                    @Html.CheckBoxFor(m => m.getchk[i + 1].Checked, new { Id = i + 1, @disabled = "disabled" })
+                    @Html.DisplayFor(m => m.getchk[i + 1].topic)
+                </td>
+            </tr>
+
+}
+
+}
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="txt_number">อุปกรณ์</label>
+                    <div class="col-md-offset-2 col-md-10">
+                        <table>
+                            @for (int i = 0; i <= Model.toolkchk.Count() - 1; i = i + 2)
+                {
+                    if (i == Model.toolkchk.Count() - 1)
+                    {
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.toolkchk[i].Checked, new { Id = i, @disabled = "disabled" })
+                                @Html.DisplayFor(m => m.toolkchk[i].topic)
+                            </td>
+                            <td  width="30px"></td>
+                            <td></td>
+                        </tr>
+        }
+        else
+        {
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(m => m.toolkchk[i].Checked, new { Id = i, @disabled = "disabled" })
+                    @Html.DisplayFor(m => m.toolkchk[i].topic)
+                </td>
+                <td  width="30px"></td>
+                <td>
+                    @Html.CheckBoxFor(m => m.toolkchk[i + 1].Checked, new { Id = i + 1, @disabled = "disabled" })
+                    @Html.DisplayFor(m => m.toolkchk[i + 1].topic)
+                </td>
+            </tr>
+
+}
+
+}
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="txt_number">เครื่องดื่ม</label>
+                    <div class="col-md-offset-2 col-md-10">
+                        <table>
+                            @for (int i = 0; i <= Model.drinkchk.Count() - 1; i = i + 2)
+                {
+                    if (i == Model.drinkchk.Count() - 1)
+                    {
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.drinkchk[i].Checked, new { Id = i, @disabled = "disabled" })
+                                @Html.DisplayFor(m => m.drinkchk[i].topic)
+                            </td>
+                            <td  width="30px"></td>
+                            <td></td>
+                        </tr>
+        }
+        else
+        {
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(m => m.drinkchk[i].Checked, new { Id = i, @disabled = "disabled" })
+                    @Html.DisplayFor(m => m.drinkchk[i].topic)
+                </td>
+                <td  width="30px"></td>
+                <td>
+                    @Html.CheckBoxFor(m => m.drinkchk[i + 1].Checked, new { Id = i + 1, @disabled = "disabled" })
+                    @Html.DisplayFor(m => m.drinkchk[i + 1].topic)
+                </td>
+            </tr>
+
+}
+
+}
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="บันทึก" class="btn btn-primary" />
+                        <a href="/TicketLive/Dev" class="btn btn-default">ยกเลิก</a>
+                    </div>
+                </div>
+
+                <br />
+            </form>
+        </section>
 
     </div>
 
+</div>
 
 
 <footer></footer>
-    
+
+

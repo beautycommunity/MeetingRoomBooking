@@ -2,109 +2,109 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbMeetingRoomBooking">
   <DataContextMoniker Name="/dbMeetingRoomBookingDataContext" />
   <nestedChildShapes>
-    <classShape Id="c13f8bd2-dfd0-43e6-83e2-eda85b55da9a" absoluteBounds="1.375, 1.25, 2, 3.1170068359375">
+    <classShape Id="c13f8bd2-dfd0-43e6-83e2-eda85b55da9a" absoluteBounds="0.5, 0.5, 2, 3.1170068359375">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/DOC_BOOKING" />
       <nestedChildShapes>
-        <elementListCompartment Id="1a098471-2d64-491b-8069-a47af03d7e2d" absoluteBounds="1.3900000000000001, 1.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1a098471-2d64-491b-8069-a47af03d7e2d" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="038e3a68-f9b0-49e7-adef-a083ceee6387" absoluteBounds="1.75, 0.75, 2, 1.3862939453125">
+    <classShape Id="038e3a68-f9b0-49e7-adef-a083ceee6387" absoluteBounds="2.75, 0.5, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/DOC_BOOKING_D" />
       <nestedChildShapes>
-        <elementListCompartment Id="458c276d-54b8-4beb-ac67-c7ce49f47763" absoluteBounds="1.7650000000000001, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="458c276d-54b8-4beb-ac67-c7ce49f47763" absoluteBounds="2.765, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.375 : 1.25); (2.375 : 0.5); (2.75 : 0.5); (2.75 : 0.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.5 : 1.19314697265625); (2.75 : 1.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbMeetingRoomBookingDataContext/DOC_BOOKING/DOC_BOOKING_DOC_BOOKING_D" />
       <nodes>
         <classShapeMoniker Id="c13f8bd2-dfd0-43e6-83e2-eda85b55da9a" />
         <classShapeMoniker Id="038e3a68-f9b0-49e7-adef-a083ceee6387" />
       </nodes>
     </associationConnector>
-    <classShape Id="ce48582b-5d8d-43b5-a556-21768ecdaada" absoluteBounds="4.75, 1.625, 2, 1.3862939453125">
+    <classShape Id="ce48582b-5d8d-43b5-a556-21768ecdaada" absoluteBounds="2.875, 2, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/DOC_BOOKING_I" />
       <nestedChildShapes>
-        <elementListCompartment Id="d3243061-8d42-4cc0-bb62-7ae981725738" absoluteBounds="4.765, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d3243061-8d42-4cc0-bb62-7ae981725738" absoluteBounds="2.8899999999999997, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.375 : 4.12314697265625); (6.58625 : 4.12314697265625); (6.58625 : 3.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 2.69314697265625); (2.875 : 2.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbMeetingRoomBookingDataContext/DOC_BOOKING/DOC_BOOKING_DOC_BOOKING_I" />
       <nodes>
         <classShapeMoniker Id="c13f8bd2-dfd0-43e6-83e2-eda85b55da9a" />
         <classShapeMoniker Id="ce48582b-5d8d-43b5-a556-21768ecdaada" />
       </nodes>
     </associationConnector>
-    <classShape Id="988521f5-b47e-4855-9b89-dd90bc321671" absoluteBounds="4.25, 3.875, 2, 1.3862939453125">
+    <classShape Id="988521f5-b47e-4855-9b89-dd90bc321671" absoluteBounds="0.625, 3.875, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/DOC_BOOKING_T" />
       <nestedChildShapes>
-        <elementListCompartment Id="47f4f9ac-157e-40bd-a782-938f255dea4e" absoluteBounds="4.265, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="47f4f9ac-157e-40bd-a782-938f255dea4e" absoluteBounds="0.63999999999999968, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.375 : 4.30757690429687); (4.25 : 4.30757690429687)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.5625 : 3.6170068359375); (1.5625 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbMeetingRoomBookingDataContext/DOC_BOOKING/DOC_BOOKING_DOC_BOOKING_T" />
       <nodes>
         <classShapeMoniker Id="c13f8bd2-dfd0-43e6-83e2-eda85b55da9a" />
         <classShapeMoniker Id="988521f5-b47e-4855-9b89-dd90bc321671" />
       </nodes>
     </associationConnector>
-    <classShape Id="1aaea1ad-4e0b-4ad5-b6be-7e119d3eead8" absoluteBounds="7.25, 3.75, 2, 1.3862939453125">
+    <classShape Id="1aaea1ad-4e0b-4ad5-b6be-7e119d3eead8" absoluteBounds="5, 3.875, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/LOG_BOOKING" />
       <nestedChildShapes>
-        <elementListCompartment Id="35636d16-cf89-470b-8915-eb556f219a12" absoluteBounds="7.265, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="35636d16-cf89-470b-8915-eb556f219a12" absoluteBounds="5.015, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="72a693f3-2185-4042-ae2c-0cccd40d98ea" absoluteBounds="1.125, 4.625, 2, 1.3862939453125">
+    <classShape Id="72a693f3-2185-4042-ae2c-0cccd40d98ea" absoluteBounds="7.125, 5.25, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_DM" />
       <nestedChildShapes>
-        <elementListCompartment Id="d618fc2d-c7f3-4539-8041-f5d853a63c25" absoluteBounds="1.1400000000000001, 5.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d618fc2d-c7f3-4539-8041-f5d853a63c25" absoluteBounds="7.1400000000000006, 5.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="39ded75e-5fb0-4a3c-8ea8-6c1001f7c74f" absoluteBounds="3.625, 5.375, 2, 1.3862939453125">
+    <classShape Id="39ded75e-5fb0-4a3c-8ea8-6c1001f7c74f" absoluteBounds="2.875, 3.625, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_DRINK" />
       <nestedChildShapes>
-        <elementListCompartment Id="0ca05f3d-4059-4de0-bb52-da8da24b8658" absoluteBounds="3.64, 5.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0ca05f3d-4059-4de0-bb52-da8da24b8658" absoluteBounds="2.89, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0339b8b4-18a0-44c6-bc8b-2324459e6182" absoluteBounds="5.25, 1.25, 2, 1.7708968098958331">
+    <classShape Id="0339b8b4-18a0-44c6-bc8b-2324459e6182" absoluteBounds="5, 0.5, 2, 1.7708968098958331">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_RM_TM" />
       <nestedChildShapes>
-        <elementListCompartment Id="fe56826e-af75-4d97-82bd-60db7fc90e02" absoluteBounds="5.265, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fe56826e-af75-4d97-82bd-60db7fc90e02" absoluteBounds="5.015, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fcb57695-0bbb-4027-92e5-ac6345ace4cb" absoluteBounds="4.375, 0.5, 2, 2.7324039713541666">
+    <classShape Id="fcb57695-0bbb-4027-92e5-ac6345ace4cb" absoluteBounds="7.125, 2.375, 2, 2.7324039713541666">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_RN" />
       <nestedChildShapes>
-        <elementListCompartment Id="28b3334f-7f38-406c-83ec-c85413386300" absoluteBounds="4.39, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="28b3334f-7f38-406c-83ec-c85413386300" absoluteBounds="7.1400000000000006, 2.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4d3d25c3-446c-4ff3-98c8-3105c0c00712" absoluteBounds="7.5, 1.125, 2, 1.7708968098958331">
+    <classShape Id="4d3d25c3-446c-4ff3-98c8-3105c0c00712" absoluteBounds="7.125, 0.5, 2, 1.7708968098958331">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_ROOM" />
       <nestedChildShapes>
-        <elementListCompartment Id="e1aa139e-5596-406e-a4d1-4c051b61c9b8" absoluteBounds="7.515, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e1aa139e-5596-406e-a4d1-4c051b61c9b8" absoluteBounds="7.14, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="f2bc17ce-6093-451b-9010-0de99e486244" absoluteBounds="0.625, 3.625, 2, 1.9631982421875">
+    <classShape Id="f2bc17ce-6093-451b-9010-0de99e486244" absoluteBounds="2.875, 5.125, 2, 1.9631982421875">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_ST" />
       <nestedChildShapes>
-        <elementListCompartment Id="855f17f1-0f10-4f01-8d80-92c368a18668" absoluteBounds="0.64, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="855f17f1-0f10-4f01-8d80-92c368a18668" absoluteBounds="2.89, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="c8f8c61b-938c-4a39-a441-894322891a5f" absoluteBounds="6.5, 5.875, 2, 1.5785953776041666">
+    <classShape Id="c8f8c61b-938c-4a39-a441-894322891a5f" absoluteBounds="5, 5.375, 2, 1.5785953776041666">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_TIME" />
       <nestedChildShapes>
-        <elementListCompartment Id="ff43df6f-0154-4943-ba6f-5b0b6eabe442" absoluteBounds="6.515, 6.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ff43df6f-0154-4943-ba6f-5b0b6eabe442" absoluteBounds="5.015, 5.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e0778639-b2ea-430a-b8cb-59c7dee56f05" absoluteBounds="3.75, 2.625, 2, 1.3862939453125">
+    <classShape Id="e0778639-b2ea-430a-b8cb-59c7dee56f05" absoluteBounds="5, 2.375, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/MAS_TOOL" />
       <nestedChildShapes>
-        <elementListCompartment Id="771c9015-b64a-4753-809c-18db34dec76c" absoluteBounds="3.765, 3.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="771c9015-b64a-4753-809c-18db34dec76c" absoluteBounds="5.0150000000000006, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="42f9fb7e-13c5-4d41-aa5d-8024bc06f06d" absoluteBounds="0.5, 1.875, 2, 1.3862939453125">
+    <classShape Id="42f9fb7e-13c5-4d41-aa5d-8024bc06f06d" absoluteBounds="0.625, 5.375, 2, 1.3862939453125">
       <DataClassMoniker Name="/dbMeetingRoomBookingDataContext/T_MAS_ROOM" />
       <nestedChildShapes>
-        <elementListCompartment Id="9451e712-382f-4a3d-8860-da80f7437059" absoluteBounds="0.515, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9451e712-382f-4a3d-8860-da80f7437059" absoluteBounds="0.64000000000000012, 5.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

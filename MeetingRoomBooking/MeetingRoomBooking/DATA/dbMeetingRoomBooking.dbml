@@ -135,7 +135,9 @@
       <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.MP_PREPARE_USER" Method="MP_PREPARE_USER" />
+  <Function Name="dbo.MP_PREPARE_USER" Method="MP_PREPARE_USER" IsComposable="true">
+    <Return Type="object" />
+  </Function>
   <Function Name="dbo.MP_SET_ID" Method="MP_SET_ID">
     <Parameter Name="STCODE" Parameter="sTCODE" Type="System.String" DbType="VarChar(20)" />
     <Parameter Name="DOCTYPE" Parameter="dOCTYPE" Type="System.String" DbType="VarChar(20)" />
